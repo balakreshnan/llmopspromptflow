@@ -1,0 +1,14 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Run.schema.json
+flow: .
+data: data.jsonl
+
+# define cloud resource
+runtime: automatic
+
+connections:
+  embed_the_question:
+    connection: aoainclat
+    deployment_name: text-embedding-ada-002
+  answer_the_question_with_context:
+    connection: aoainclat
+    deployment_name: gpt-35-turbo-16k

@@ -1,0 +1,15 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Run.schema.json
+flow: ../profileindex3-sample-flow-QnA Relevance Evaluation-202311131325
+data: ./data.jsonl
+run: profileindex3_sample_flow_variant_0_20231113_133240_846251 # replace with your run name
+column_mapping:
+  groundtruth: ${data.answer}
+  prediction: ${run.outputs.output}
+
+# define cloud resource
+runtime: automatic
+
+connections:
+  relevance_score:
+    connection: aoainclat
+    deployment_name: gpt-35-turbo-16k

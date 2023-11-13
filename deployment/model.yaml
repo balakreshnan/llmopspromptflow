@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/model.schema.json
+name: profileindex3-sample-flow-model
+path: ../profileindex3-sample-flow
+description: register profileindex3-sample-flow flow folder as a custom model
+properties:
+  # In AuzreML studio UI, endpoint detail UI Test tab needs this property to know it's from prompt flow
+  azureml.promptflow.source_flow_id: profileindex3-sample-flow
+  
+  # Following are properties only for classification flow 
+  # endpoint detail UI Test tab needs this property to know it's a classification flow
+  azureml.promptflow.mode: classification

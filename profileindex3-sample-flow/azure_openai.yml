@@ -1,0 +1,7 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/AzureOpenAIConnection.schema.json
+name: aoainclat
+type: azure_open_ai
+api_key: Mkey>
+api_base: "https://aoainame.openai.azure.com"
+api_type: "azure"
+api_version: "2023-07-01-preview"
